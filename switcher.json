@@ -1,0 +1,8 @@
+{
+  "solution": "Clevernet.sln",
+  "solutionFolder": null,
+  "mappings": {
+    "Claudia": "../Claudia/src/Claudia/Claudia.csproj"
+  },
+  "removeProjects": true
+}

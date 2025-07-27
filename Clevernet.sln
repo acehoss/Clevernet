@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverBot", "CleverBot\CleverBot.csproj", "{F9F3AF9E-C0D3-42AE-A5F1-432D06BC589B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMatrix", "LibMatrix\LibMatrix\LibMatrix.csproj", "{83D38940-AB3A-4E3F-8B79-55B784F50772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMatrix.EventTypes", "LibMatrix\LibMatrix.EventTypes\LibMatrix.EventTypes.csproj", "{D98B662C-715A-499E-920D-9D22FFE21464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcaneLibs", "LibMatrix\ArcaneLibs\ArcaneLibs\ArcaneLibs.csproj", "{56D4A22F-052C-465C-97D2-9B448FA4D577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clevernet.Tests", "Clevernet.Tests\Clevernet.Tests.csproj", "{9A1785BF-E86B-4F77-A351-892D17FB09C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clevernet.Data", "Clevernet.Data\Clevernet.Data.csproj", "{5CD908D7-DCAC-4BB6-8FBF-B7C1E0AE8924}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9F3AF9E-C0D3-42AE-A5F1-432D06BC589B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F3AF9E-C0D3-42AE-A5F1-432D06BC589B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F3AF9E-C0D3-42AE-A5F1-432D06BC589B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F3AF9E-C0D3-42AE-A5F1-432D06BC589B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D38940-AB3A-4E3F-8B79-55B784F50772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D38940-AB3A-4E3F-8B79-55B784F50772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D38940-AB3A-4E3F-8B79-55B784F50772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D38940-AB3A-4E3F-8B79-55B784F50772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D98B662C-715A-499E-920D-9D22FFE21464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98B662C-715A-499E-920D-9D22FFE21464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98B662C-715A-499E-920D-9D22FFE21464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98B662C-715A-499E-920D-9D22FFE21464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D4A22F-052C-465C-97D2-9B448FA4D577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D4A22F-052C-465C-97D2-9B448FA4D577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D4A22F-052C-465C-97D2-9B448FA4D577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D4A22F-052C-465C-97D2-9B448FA4D577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1785BF-E86B-4F77-A351-892D17FB09C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1785BF-E86B-4F77-A351-892D17FB09C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1785BF-E86B-4F77-A351-892D17FB09C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1785BF-E86B-4F77-A351-892D17FB09C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD908D7-DCAC-4BB6-8FBF-B7C1E0AE8924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD908D7-DCAC-4BB6-8FBF-B7C1E0AE8924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD908D7-DCAC-4BB6-8FBF-B7C1E0AE8924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD908D7-DCAC-4BB6-8FBF-B7C1E0AE8924}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
