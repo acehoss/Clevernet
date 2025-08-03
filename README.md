@@ -2,17 +2,41 @@
 
 An advanced AI agent framework that enables persistent, context-aware AI agents to operate within the Matrix ecosystem. Clevernet uses LMML (Language Model Markup Language) as its primary data interchange format, providing a structured way for agents to process events, maintain state, and interact with users and external systems.
 
-> **Note**: This is a proof-of-concept implementation demonstrating complex agentic systems. While functional, it's not production-ready and serves primarily as an example of advanced LLM agent architecture.
+---
+> **Note**: This is a proof-of-concept implementation demonstrating complex agentic systems. While mostly functional, it's not production-ready and serves primarily as an example of advanced LLM agent architecture.
+---
+> **Note2**: A lot of this documentation was AI-generated when I wrote the software. I've fixed up things it got wrong as I could, but take it with a grain of salt. The code is the source of truth.
+---
+
+## Purpose
+
+ I wrote this software over about a week while on vacation for the holidays in 2024. My focus was on getting a proof of concept for some ideas I had in my head:
+
+- If I build agent context from chat rooms, could they demonstrate persistent existence  
+- If agents can participate in chat rooms, they should able to interact with each other as well as humans
+
+Some specific things I was hoping to see:
+
+- Agents can understand a context containing information from multiple chat rooms ✅
+- Agents exhibit understanding of time ✅
+- Agents understand and can use the windowing system ✅
+- Agents treat chat rooms separately but demonstrate understanding across them ✅
+- Assign tasks via chat and agents plan and track the task ✅
+- Agents can self-organize via chat ⏳
+
+## Detailed Documentation
+
+A much longer write-up about the internals of the software is in [Clevernet.md](Clevernet.md)
 
 ## Features
 
 - **Persistent AI Agents**: Agents maintain context and memory across sessions using PostgreSQL-backed storage
-- **Multi-Model Support**: Integration with various LLMs (Claude, GPT-4, Gemini, etc.) via OpenRouter API
+- **Multi-Model Support**: Integration with any LLM that supports tool calling via OpenRouter API
 - **Sophisticated Window System**: Content management through scrollable, searchable windows with lifecycle management
 - **Virtual Filesystem**: Database-backed file storage with path-based organization
 - **Extensible Tool Framework**: Function-calling system enabling diverse agent capabilities
-- **RAG Integration**: Semantic search across conversation history using local ONNX embeddings
 - **LMML Processing**: Token-efficient XML markup language optimized for LLM interaction
+- **Subagents**: agents can leverage subagents to interact with large-context data sources or handle summarization
 
 ## Architecture Overview
 
@@ -40,9 +64,7 @@ A custom XML format designed for efficient token usage and clear structure:
 
 <window windowId="123" srcType="file" src="agents:/config.yaml" 
         contentType="text/yaml" lines="50" pinned system>
-  <content raw>
     # Actual file content here
-  </content>
 </window>
 ```
 
@@ -54,9 +76,10 @@ A custom XML format designed for efficient token usage and clear structure:
 4. **Tool Execution**: Iterative function calling (max 10 iterations per wake)
 5. **Response Handling**: Results sent back to Matrix rooms
 
-### Window System
+### Window System for LLMs
 
 Windows provide sophisticated content management:
+
 - Line-based viewport (default 20 lines)
 - States: normal, maximized, minimized
 - Auto-close after N turns unless pinned
